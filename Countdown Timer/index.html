@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Countdown Timer + Live Clock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>⏰ Countdown Timer + Live Clock</h1>
+
+     <!-- Theme Controls -->
+    <div class="theme-controls">
+      <button onclick="toggleTheme()" id="theme-toggle">🌙 Toggle Theme</button>
+      <div class="theme-switcher">
+        <h3>🎨 Choose Theme:</h3>
+        <button onclick="setTheme('neon')">💡 Neon</button>
+        <button onclick="setTheme('pastel')">🌸 Pastel</button>
+        <button onclick="setTheme('retro')">🕹️ Retro</button>
+      </div>
+    </div>
+
+    <!-- Live Clock -->
+    <div class="clock">
+      <h2>🕒 Current Time</h2>
+      <div id="live-clock">--:--:--</div>
+    </div>
+
+    <!-- Countdown Input -->
+    <div class="countdown">
+      <h2>⏳ Set Countdown</h2>
+      <input type="text" id="event-name" placeholder="Event Name (e.g., Birthday)">
+      <input type="datetime-local" id="datetime-picker">
+      <button onclick="startCountdown()">▶️ Start Countdown</button>
+      <div id="countdown-display">--:--:--</div>
+      <button onclick="shareCountdown()">📤 Share Countdown</button>
+      <button onclick="cancelCountdown()">Cancel Countdown</button>
+    </div>
+
+    <!-- Preset Events -->
+    <div class="presets">
+      <h3>🎯 Preset Events</h3>
+      <button onclick="setPreset('New Year', '2025-12-31T23:59')">🎉 New Year</button>
+      <button onclick="setPreset('Exam Day', '2025-12-01T09:00')">🎓 Exam Day</button>
+      <button onclick="setPreset('My Birthday', '2025-11-15T00:00')">🎂 Birthday</button>
+    </div>
+
+    <!-- Countdown History -->
+    <div class="history">
+      <h3>📜 History (Last 5 Events)</h3>
+      <ul id="history-list"></ul>
+    </div>
+
+    <!-- Alarm Sound -->
+    <audio id="alarm-sound" src="https://www.soundjay.com/button/beep-07.mp3" preload="auto"></audio>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>⏳ Made with ❤️ by <a href="https://linkedin.com/in/sagar-ganesh-93bb6281" target="_blank">Sagar Ganesh</a> | © 2025</p>
+    <p>🧠 A Vox & Sagar Creation — Time waits for none, but we build for it.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
